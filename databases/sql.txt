@@ -1,0 +1,13 @@
+create table base_user
+(
+    user_id       int auto_increment comment '用户id（主键，自增）'
+        primary key,
+    user_name     varchar(32) null comment '用户名称',
+    user_password varchar(32) null comment '用户密码',
+    user_email    varchar(32) null comment '用户邮箱（用户账号）',
+    user_role     varchar(32) null comment '用户角色（ADMIN/USER）',
+    user_status   varchar(1)  null comment '用户状态（0:正常,1:禁用）'
+)
+    charset = utf8mb3
+    row_format = DYNAMIC;
+
